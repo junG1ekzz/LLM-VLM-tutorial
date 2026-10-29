@@ -58,3 +58,7 @@ class MultiHeadAttention(nn.Module):
         out = out.transpose(1, 2).contiguous().view(B, Tq, C)
 
         return self.resid_dropout(self.wo(out))
+
+
+class LayerNorm(nn.Module):
+    
