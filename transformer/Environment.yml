@@ -1,0 +1,11 @@
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      # Windows 上 PyPI 默认的 torch 是 CPU 版，加上 PyTorch 官方源以获取 CUDA 13.0 版
+      - --extra-index-url https://download.pytorch.org/whl/cu130
+      - torch>=2.11
+      - transformers
